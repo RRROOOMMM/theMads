@@ -1,0 +1,130 @@
+.act .nav {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    background: white;
+}
+
+.act .nav .nav__top{
+    width: 96%;
+}
+
+.act .nav .logo{
+    margin-bottom: 2rem;
+}
+
+.act .socials {
+    display: flex;
+    @media #{$mq-sm} {
+        justify-content: center;
+    }
+}
+
+
+.act .socials  > *{
+    margin: 0 15px;
+}
+.act .nav .dropdown {
+    display: block;
+    margin-bottom: 0;
+}
+.act .nav .dropdown__menu{
+    @media #{$mq-sm} {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    width: 100%;
+    visibility: visible;
+    transform: translate3d(0,0,0);
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 30px 0 30px 0;
+    margin-bottom: -30px;
+    width:  100%;
+    justify-content: space-between;
+    mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.act .nav .dropdown__menu .dropdown__item{
+    padding: 0 20px 0 20px;
+    white-space: nowrap;
+    font-size: 4.5vw;
+    @media #{$mq-sm} {
+        font-size: 2.8vw;
+    }
+}
+.act .nav .dropdown__menu .dropdown__item:last-child{
+    padding: 0 0 0 20px;
+}
+
+.act .nav .dropdown__menu .dropdown__item:first-child{
+    padding: 0 20px 0 0;
+}
+
+.act .nav .btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.act .nav .nav__bottom{
+    width: 92%;
+}
+.act .nav .menu__item {
+    font-size: 4vw;
+    line-height: 7vw;
+    @media #{$mq-xs} {
+        font-size: 6vw;
+        line-height: 11vw;
+    }
+}
+
+.act .container{
+    position: fixed;
+}
+
+body.act {
+    overflow: hidden;
+}
+
+.act .nav > *:not(.b-table) {
+    display: block !important;
+}
+.act .nav .b-table{ 
+    display: table;
+}
+@media only screen and (max-height: 500px) {
+    .act .nav .logo{
+        margin-bottom: 15px;
+    }
+    .act .nav .dropdown__menu{
+        padding-top: 10px;
+    }
+    .act .nav .dropdown__menu .dropdown__item {
+        font-size: 20px !important;
+    }
+    .act .menu {
+        text-align: center;
+    }
+    .act .menu .menu__item {
+        padding: 0 20px;
+        display: inline-block;
+    }
+    .act .nav .nav__bottom{
+        display: flex !important;
+        align-items: center;
+        justify-content: space-around;
+        & .btn{
+            margin: 0;
+        }
+    }
+}
